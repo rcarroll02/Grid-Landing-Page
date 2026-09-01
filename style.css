@@ -1,0 +1,158 @@
+/* --- Global Resets & Variables --- */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(228, 100%, 60%);
+  font-family: inter, sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: hsl(0, 0%, 100%);
+}
+
+/* --- Desktop Styles (Default) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 70px;
+  position: relative;
+  z-index: 100;
+  border-bottom: .025px solid hsl(224, 100%, 95%);
+}
+
+.logo {
+  padding-left: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo__img {
+  max-width: 12px;
+  max-height: 12px;
+}
+
+.logo__text {
+  padding-left: 0.25rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(224, 100%, 95%);
+}
+
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  padding: 0 1rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  
+  position: relative;
+  z-index: 2;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+  position: absolute;
+  top: calc(var(--nav-height) - 0.5rem);
+  right: 1rem;
+  min-width: 220px;
+  flex-direction: column;
+  align-items: stretch;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 1rem;
+}
+
+.nav-links li {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+.nav-links li:last-child {
+  border-bottom: none;
+}
+
+.nav-links a {
+  display: block;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.menu-toggle:checked ~ .nav-links {
+  max-height: 420px;
+  opacity: 1;
+  padding: 0.5rem 1rem;
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
