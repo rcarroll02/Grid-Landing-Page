@@ -227,12 +227,20 @@ p {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.stat__img--container {
+  padding: 0;
+}
+
 .stat__card {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 0.5px solid hsl(224, 100%, 95%);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  appearance: none;
 }
 
 .stat__card:hover .stat__img--container,
